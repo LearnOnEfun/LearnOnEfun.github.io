@@ -1,0 +1,64 @@
+
+.nav {
+  width: auto;
+  margin: 0px auto;
+  border: medium double red;
+  /*border: 4px solid blue;*/
+  background-color: 		#909090;
+}
+
+ul,li{
+  margin: 0px;
+  padding: 0px;
+  list-style-type:none;
+  overflow:hidden;
+}
+.nav li{
+  float: left;
+  width: 84px;
+  height: 32px;
+  text-align: center;
+  list-style: none;
+  line-height: 32px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#nav-pic {
+  background-image: url(../i/sundown.jpg);
+  width: auto;
+  padding: 40px 80px;
+  background-size: cover;
+  background-position: 50% 95%;
+  opacity: 0.9;
+}
+
+#nav-pic h2,p{
+  /*color: #7f8c8d;*/
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+div {
+  border: medium double red;
+  /*border: 4px solid blue;*/
+}
+
+ul
+{
+/*list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;*/
+}
+
+#content {
+  color: white;
+  /*padding-left: 15px;
+  padding-right:15px;*/
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+}
