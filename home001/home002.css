@@ -27,10 +27,7 @@ ul,li{
 #nav-pic {
   background-image: url(../i/sundown.jpg);
   width: auto;
-  padding: 40px 80px;
-  background-size: cover;
-  background-position: 50% 95%;
-  opacity: 0.9;
+  height: 400px;
 }
 
 #nav-pic h2,p{
