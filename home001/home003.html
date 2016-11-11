@@ -4,13 +4,12 @@
   <title>js</title>
   <meta content="width=600">
   <meta charset="utf-8">
-
+  <script type="text/javascript" src="home003.js"></script>
 </head>
 <body>
   <h1>Javascript 练习场</h1>
   <h3>1、alert语句</h3>
   <button type="button" onclick="alerttest()">hello world</button>
-  <input type="button" onclick="alerttest()" value="hello world">
   <h3>2、prompt语句</h3>
   <button type="button" onclick="disp_prompt()" >点我点我！！</button>
   <hr>
@@ -18,11 +17,13 @@
   <button type="button" onclick="close_win()" >关闭本页面</button>
   <hr>
   <h3>4、判断年龄</h3>
-  <input type="button" name="age" onclick="guess_age()" value="测试年龄">
+  <button type="button" name="age" onclick="guess_age()" >测试年龄</button>
   <hr>
-  <h3>5、</h3>
-  <button type="button" onclick="collect_user()" >告诉我你是谁</button>
+  <h3>5、个人信息</h3>
+  <p>你的名字</p><input type="text"  name="personName" value="yourname" id="name">
+
+  <button type="button" onclick="collect_user()" >提交</button>
   <hr>
-  <script type="text/javascript" src="home003.js"></script>
+
 </body>
 </html>

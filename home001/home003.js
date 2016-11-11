@@ -1,17 +1,17 @@
 function alerttest()
 {
-  nihao = "你好世界"
-  alert(nihao)
+  nihao = "你好世界";
+  alert(nihao);
 }
 
 
 function disp_prompt()
   {
-    var name = prompt("请问你叫什么名字？")
-    if (name != null && name != "")
+    var name = prompt("请问你叫什么名字？");
+    if (name != null && name != "");
       {
-        name += "，你好"
-        document.write(name)
+        name += "，你好";
+        document.write(name);
       }
   }
 
@@ -29,33 +29,30 @@ function close_win()
 
 function guess_age()
 {
-  var age = prompt("请输入年龄"，20160101)
-  if (age != null && age.length == 8 && age.type == int )
+  var age = prompt("请输入出生年份:", 2016);
+  if (age != null && age.length == 4  )
   {
-    age = 20161101 - age
-    document.write(<p>你的年龄是：</p>,age)
-  }
-  else{
+    var nowDate = new Date();
+    var year = nowDate.getFullYear();
 
+    age = year - age;
+    document.write('<p>你的年龄是：</p>' + age);
   }
+  else {
+    alert("输入数值不当，请重新输入！");
+  }
+
 }
 
 
-  /*var a = prompt("说出你的名字：");
- var b = prompt("留下你的芳龄：");
-var c=prompt("来自哪个地方：")
- var d=prompt("告诉我你的职业：")
- var user1 = [a,b]*/
 function collect_user()
  {
-  var user = [1,2,3,4]
+  var personinfo = Array();
+  personinfo[0] = document.getElementById('name');
   /*user[0]=prompt("说出你的名字：")
   user[1]=prompt("留下你的芳龄：")
   user[2]=prompt("来自哪个地方：")
   user[3]=prompt("告诉我你的职业：")*/
-  document.wirte(user)
-
-
-  document.wirteln(user[0],user[1])
+  document.write(personinfo)
 
  }
