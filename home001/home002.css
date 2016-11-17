@@ -1,3 +1,4 @@
+html,body{height:100%}
 
 body {
   background-color:#EEE;
@@ -34,7 +35,7 @@ li{
 }
 
 .bd {
-
+  min-height:100%;
   margin-bottom: 90px;
 }
 
@@ -42,12 +43,15 @@ li{
   max-width: 780px;
   min-width: 320px;
   margin: 0px auto;
+  padding-bottom:30px;
+  /*overflow:hidden;*/
 }
 
 .ft{
   background-color: 	#C8C8C8;
   height: 30px;
   text-align: center;
+  margin-top:-30px;
 }
 
 #ft-box {
@@ -56,10 +60,6 @@ li{
   min-width: 320px;
   margin: 0px auto;
 }
-
-
-
-
 
 
 #clearfix{
