@@ -63,13 +63,13 @@ function inputBook2()
       book_info.point = prompt("请输入2016阅读过书的评分：","评分");
 
       var tableline2 = document.createElement("tr");
-
       var table1 = document.createElement("td");
       var table2 = document.createElement("td");
       var table3 = document.createElement("td");
       var txtbook1 = document.createTextNode(book_info.name)
       var txtbook2 = document.createTextNode(book_info.bname)
       var txtbook3 = document.createTextNode(book_info.point)
+
       table1.appendChild(txtbook1);
       table2.appendChild(txtbook2);
       table3.appendChild(txtbook3);
@@ -79,9 +79,39 @@ function inputBook2()
       tableline2.appendChild(table3);
 
       inputTableBook.appendChild(tableline2);
-
+      //other info
+      book_list[i] = book_info
+      sum_point  += parseInt(book_info.point)
     }
+    //count of books
+    //count_book = book_info.length
+    count_book = time
+    // sum of point
+    sum_point = sum_point / time
+    //variance
+    var variance_point = 0
+    for (i=0; i<time; i++)
+    {
+      variance_point  += (book_list[i].point - sum_point)^2
+    }
+    variance_point = variance_point / time
 
+    //document.write("阅读本：" + count_book + "评分均值：" + sum_point + "方差：" + variance_point)
+    var tableline3 = document.createElement("tr");
+    var table1 = document.createElement("td");
+    var table2 = document.createElement("td");
+    var table3 = document.createElement("td");
+    var txtbook1 = document.createTextNode("阅读本：" + count_book)
+    var txtbook2 = document.createTextNode("评分均值：" + sum_point)
+    var txtbook3 = document.createTextNode("方差：" + variance_point)
+    table1.appendChild(txtbook1);
+    table2.appendChild(txtbook2);
+    table3.appendChild(txtbook3);
 
+    tableline3.appendChild(table1);
+    tableline3.appendChild(table2);
+    tableline3.appendChild(table3);
+
+    inputTableBook.appendChild(tableline3);
 
 }
