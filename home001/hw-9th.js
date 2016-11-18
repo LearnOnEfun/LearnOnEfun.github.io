@@ -48,8 +48,7 @@ function inputBook2()
 
     var inputTableBook = document.getElementById("inputTableBook");
     inputTableBook.appendChild(tableline1);
-    //inputTableBook.appendChild(tableHeader2);
-    //inputTableBook.appendChild(tableHeader3);
+
 
     //input book info
     var book_list = Array();
@@ -57,10 +56,13 @@ function inputBook2()
     var sum_point = 0
     var time = parseInt(prompt("请问今年你阅读了多少本书（决定了你输入数据的次噢）"))
 
-    for (i=0; i<time; i++){
+    for (i=0; i<time; i++)
+    {
       book_info.name = prompt("请输入2016阅读过书的作者：","作者");
       book_info.bname = prompt("请输入2016阅读过书的名字：","《书名》");
       book_info.point = prompt("请输入2016阅读过书的评分：","评分");
+
+      var tableline2 = document.createElement("tr");
 
       var table1 = document.createElement("td");
       var table2 = document.createElement("td");
@@ -72,9 +74,11 @@ function inputBook2()
       table2.appendChild(txtbook2);
       table3.appendChild(txtbook3);
 
-      inputTableBook.appendChild(table1);
-      inputTableBook.appendChild(table2);
-      inputTableBook.appendChild(table3);
+      tableline2.appendChild(table1);
+      tableline2.appendChild(table2);
+      tableline2.appendChild(table3);
+
+      inputTableBook.appendChild(tableline2);
 
     }
 
