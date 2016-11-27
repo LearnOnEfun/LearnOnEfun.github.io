@@ -1,0 +1,41 @@
+div,nav,footer {
+border: 1px solid red;
+}
+
+
+h1 {
+text-align: center;
+}
+
+li {
+list-style: none;
+margin-bottom: 28px; /*导航间距*/
+font-size: 1.1em; /*字体大小*/
+/*line-height: 55px;*/
+font-family: "微软雅黑";
+text-decoration: none
+}
+
+#nav-main {
+  float: left;
+  width: 100px;
+  padding: 10px;
+}
+
+#nav-main a {
+text-decoration: none /*去掉下划线*/
+}
+
+#bd-box {
+float: left;
+width: 780px;
+margin: 0 10px;
+padding: 10px;
+}
+
+.ft{
+clear: both; /*去掉前一个float：left的排版影响，清除浮动*/
+height: 30px;
+text-align: center;
+margin-top:-30px;
+}

@@ -10,12 +10,12 @@ function inputBook()
 
   for (i=0; i<time; i++)
   {
-    book_info.name = prompt("请输入2016阅读过书的作者：","作者");
-    book_info.bname = prompt("请输入2016阅读过书的名字：","《书名》");
-    book_info.point = prompt("请输入2016阅读过书的评分：","评分");
-    book_list[i] = book_info
-    sum_point  += parseInt(book_info.point)
-    document.write(book_list[i].name + book_list[i].bname + book_list[i].point + '<br>');
+          book_info.name = prompt("请输入2016阅读过书的作者：","作者");
+          book_info.bname = prompt("请输入2016阅读过书的名字：","《书名》");
+          book_info.point = prompt("请输入2016阅读过书的评分：","评分");
+          book_list[i] = book_info
+          sum_point  += parseInt(book_info.point)
+          document.write(book_list[i].name + book_list[i].bname + book_list[i].point + '<br>');
 
   }
 
@@ -53,49 +53,53 @@ function inputBook2()
     //input book info
     var book_list = Array();
     var book_info = {}
-    var sum_point = 0
+    sum_point = 0
     var time = parseInt(prompt("请问今年你阅读了多少本书（决定了你输入数据的次噢）"))
 
     for (i=0; i<time; i++)
     {
-      book_info.name = prompt("请输入2016阅读过书的作者：","作者");
-      book_info.bname = prompt("请输入2016阅读过书的名字：","《书名》");
-      book_info.point = prompt("请输入2016阅读过书的评分：","评分");
+            book_info.name = prompt("请输入2016阅读过书的作者：","作者");
+            book_info.bname = prompt("请输入2016阅读过书的名字：","《书名》");
+            book_info.point = prompt("请输入2016阅读过书的评分：","评分");
 
-      var tableline2 = document.createElement("tr");
-      var table1 = document.createElement("td");
-      var table2 = document.createElement("td");
-      var table3 = document.createElement("td");
-      var txtbook1 = document.createTextNode(book_info.name)
-      var txtbook2 = document.createTextNode(book_info.bname)
-      var txtbook3 = document.createTextNode(book_info.point)
+            var tableline2 = document.createElement("tr");
+            var table1 = document.createElement("td");
+            var table2 = document.createElement("td");
+            var table3 = document.createElement("td");
+            var txtbook1 = document.createTextNode(book_info.name)
+            var txtbook2 = document.createTextNode(book_info.bname)
+            var txtbook3 = document.createTextNode(book_info.point)
 
-      table1.appendChild(txtbook1);
-      table2.appendChild(txtbook2);
-      table3.appendChild(txtbook3);
+            table1.appendChild(txtbook1);
+            table2.appendChild(txtbook2);
+            table3.appendChild(txtbook3);
 
-      tableline2.appendChild(table1);
-      tableline2.appendChild(table2);
-      tableline2.appendChild(table3);
+            tableline2.appendChild(table1);
+            tableline2.appendChild(table2);
+            tableline2.appendChild(table3);
 
-      inputTableBook.appendChild(tableline2);
-      //other info
-      book_list[i] = book_info
-      sum_point  += parseInt(book_info.point)
+            inputTableBook.appendChild(tableline2);
+            //other info
+            book_list[i] = book_info
+            sum_point  += parseInt(book_info.point)
+
     }
+
     //count of books
     //count_book = book_info.length
     count_book = time
-    // sum of point
+    // avg of point
     sum_point = sum_point / time
     //variance
     var variance_point = 0
     for (i=0; i<time; i++)
     {
-      variance_point  += (book_list[i].point - sum_point)^2
+      //方差不能用^2,只好用笨方法了
+          variance_point  += (book_list[i].point - sum_point)*(book_list[i].point - sum_point)
     }
     variance_point = variance_point / time
 
+    //input last line
     //document.write("阅读本：" + count_book + "评分均值：" + sum_point + "方差：" + variance_point)
     var tableline3 = document.createElement("tr");
     var table1 = document.createElement("td");
@@ -113,5 +117,11 @@ function inputBook2()
     tableline3.appendChild(table3);
 
     inputTableBook.appendChild(tableline3);
+
+}
+
+
+function inputBook3 ()
+{
 
 }
