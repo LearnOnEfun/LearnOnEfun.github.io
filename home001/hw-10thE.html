@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--要求：第二行导航栏固定宽度，其他自适应-->
+<!--三栏，不固定宽度情况下，如果自适应？-->
+<!--此练习：左右栏利用float属性，排版上让center排在right之后，从而填充left和right之间的空间，实现自适应-->
+
+<html>
+
+<head>
+  <title>linkding's blog</title>
+  <meta name="pratice" content="composition">
+  <meta charset="utf-8">
+  <!--link rel="stylesheet" href="hw-10thB.css"-->
+  <style type="text/css">
+  div,nav,footer {
+  border: 1px solid red;
+  }
+
+  h1 {
+  text-align: center;
+  }
+
+  li {
+  list-style: none;
+  margin-bottom: 28px; /*导航间距*/
+  font-size: 1.1em; /*字体大小*/
+
+  font-family: "微软雅黑";
+  text-decoration: none
+  }
+
+  #wrapper{
+  margin: 0 auto;
+  }
+
+  #left {
+  float: left;
+  width: 150px;
+  padding: 10px;
+  }
+
+  #left a {
+  text-decoration: none /*去掉下划线*/
+  }
+
+  #center{
+
+  padding: 10px 10px;
+  }
+
+  #right{
+  float: right;
+  width: 210px;
+  padding: 10px;
+
+  }
+  .ft{
+  clear: both;
+  height: 30px;
+  text-align: center;
+  }
+
+  </style>
+</head>
+
+
+<body>
+      <div class="wrapper">
+                <h1>零丁的博客</h1>
+                  <nav id="left">
+                            <ul >
+                              <li><a href="home.html">主页</a></li>
+                              <li><a href="">目录</a></li>
+                              <li><a href="">分类</a></li>
+                              <li><a href="home003.html">练习</a></li>
+                            </ul>
+                  </nav>
+
+
+                  <div id="right">
+                        <h3>朋友们</h3>
+                        <ul>
+                          <li>传阳</li>
+                          <li>美娟</li>
+                          <li>培炎</li>
+                        </ul>
+
+                  </div>
+
+                  <div id="center">
+                  <article>
+                           <section>
+                             <h2>【科幻概论2010】第1讲笔记</h2>
+                            <p>一个高大的男人占满了屏幕，声如洪钟，逡黑色长袖衬衫，纽扣开至胸膛，两边肩线松松垮垮，双手衣袖耷拉得卷上腕关节，交叉前臂，一手执着无线麦，头额微微左倾，用右手轻轻将额前头发拨弄至耳后，真是一头浓密黑渔网丝，旋即露出脑后扎着的小马尾，整一副潇洒不羁放荡爱自由的浪子</p>
+                           </section>
+
+                           <section>
+                             <h2>【科幻概论2010】第2讲笔记</h2>
+                             <p>墨西哥某名人的一句话：墨西哥最大的悲剧在于，离上帝是如此之远，而又离美国如此之近</p>
+                           </section>
+                  </article>
+                  </div>
+      </div>
+
+
+      <footer class="ft">
+          Copyright@linkding  All Rights Reserved
+      </footer>
+
+</body>
