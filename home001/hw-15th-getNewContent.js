@@ -2,7 +2,7 @@ function getNewContent(){
   var request = getHTTPObject();
   if (request){
     request.open("GET", "hw-15th.txt", true);
-    request.onreadstatechange = function() {
+    request.onreadystatechange = function() {
       if (request.readyState == 4) {
       alert("返回值，收到！")
       var para = document.createElement("p");
