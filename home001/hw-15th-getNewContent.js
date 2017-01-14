@@ -16,3 +16,4 @@ function getNewContent(){
     alert('Sorry,your brower doesn\'t support XMLHttpRequest');
   }
 }
+addLoadEvent(getNewContent);
