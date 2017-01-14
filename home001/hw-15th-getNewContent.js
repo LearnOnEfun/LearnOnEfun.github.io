@@ -3,11 +3,11 @@ function getNewContent(){
   if (request){
     request.open("GET", "hw-15th.txt", true);
     request.onreadstatechange = function() {
-      if (request.readState == 4) {
+      if (request.readyState == 4) {
       alert("返回值，收到！")
       var para = document.createElement("p");
       var text = document.createTextNode(request.resposeText);
-      para.appendChild(txt);
+      para.appendChild(text);
       document.getElementById('new').appendChild(para);
       }
     };
