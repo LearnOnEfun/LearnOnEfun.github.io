@@ -6,7 +6,7 @@ function getNewContent(){
       if (request.readyState == 4) {
       alert("返回值，收到！")
       var para = document.createElement("p");
-      var text = document.createTextNode(request.resposeText);
+      var text = document.createTextNode(request.responseText);
       para.appendChild(text);
       document.getElementById('new').appendChild(para);
       }
