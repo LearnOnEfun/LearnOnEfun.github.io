@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--要求：第二行导航栏固定宽度，其他自适应-->
-<!--两拦-->
-<!--方法1:浮动+margin-left（等于固定左侧的宽度）-->
+<!--三栏-->
+<!---->
 
 <html>
 
@@ -28,29 +28,39 @@
   text-decoration: none
   }
 
-  #nav-main {
-  float: left;
-  width: 100px;
-  padding: 10px;
+  #wrapper{
+  display:-webkit-box;
+  display:-moz-box;
+  width: 100%;
   }
 
-  #nav-main a {
+  #left ,#right {
+  width:200px;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  padding:20px;
+  }
+
+  #left a {
   text-decoration: none /*去掉下划线*/
   }
 
-  #bd-box {
-  margin-left: 100px;
-  /*float: left;
-  width: 780px;
-  margin: 0 10px;
-  padding: 10px;*/
+  #center {
+    padding:20px;
+   -webkit-box-flex:1;
+   -moz-box-flex:1;
+   -webkit-box-ordinal-group:2;
+   -moz-box-ordinal-group:2;
+   margin:0 5px;
   }
-
+  #right{
+  -webkit-box-ordinal-group:2;
+  -moz-box-ordinal-group:2;
+  }
   .ft{
-  clear: both; /*去掉前一个float：left的排版影响，清除浮动*/
+  clear: both;
   height: 30px;
   text-align: center;
-  margin-top:-30px;
   }
 
   </style>
@@ -58,9 +68,9 @@
 
 
 <body>
-      <div class="">
+      <div class="wrapper">
                 <h1>零丁的博客</h1>
-                  <nav id="nav-main">
+                  <nav id="left">
                             <ul >
                               <li><a href="home.html">主页</a></li>
                               <li><a href="">目录</a></li>
@@ -69,7 +79,7 @@
                             </ul>
                   </nav>
 
-                  <div id="bd-box">
+                  <div id="center">
                   <article>
                            <section>
                              <h2>【科幻概论2010】第1讲笔记</h2>
@@ -82,6 +92,16 @@
                            </section>
                   </article>
                   </div>
+                  <div id="right">
+                        <h3>朋友们</h3>
+                        <ul>
+                          <li>传阳</li>
+                          <li>美娟</li>
+                          <li>培炎</li>
+                        </ul>
+
+                  </div>
+
       </div>
 
 
