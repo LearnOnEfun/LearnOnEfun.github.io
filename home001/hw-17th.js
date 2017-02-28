@@ -1,6 +1,8 @@
 //画布
 window.onload = function plot(){
-  var canvas = document.querySelector("#canvas")
+//  var canvas = document.querySelector("#canvas")
+//是否可以表格内的线条也调节细点？
+  var canvas = document.getElementById('canvas');
   ctx = canvas.getContext('2d');
   cW = canvas.width;
   cH = canvas.height;
@@ -20,7 +22,12 @@ window.onload = function plot(){
   }
 }
 
-
+//获取鼠标位置
+function getMousePos(event) {
+            var e = event || window.event;
+            return {'x':e.clientX,'y':clientY}
+        }
+//填色
 function draw(){
 
 }
